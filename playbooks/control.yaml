@@ -1,5 +1,6 @@
 ---
   - hosts: master
+    become: true
     tasks:
       - name: Intall tools
         apt: name={{item}} state=present update_cache=yes

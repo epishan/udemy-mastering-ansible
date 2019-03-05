@@ -4,7 +4,11 @@ metadata:
   name: lb01
 spec:
   ports:
-  - port: 22
+  - name: ssh
+    port: 22
+    protocol: TCP
+  - name: tcp-80
+    port: 80
     protocol: TCP
   selector:
     name: lb01
